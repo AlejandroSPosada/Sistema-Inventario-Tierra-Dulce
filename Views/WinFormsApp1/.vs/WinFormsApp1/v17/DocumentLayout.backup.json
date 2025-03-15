@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Views\\WinFormsApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{093B01F5-B52D-42CF-AABC-FE33889E27A1}|WinFormsApp1\\WinFormsApp1.csproj|C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Views\\WinFormsApp1\\winformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{093B01F5-B52D-42CF-AABC-FE33889E27A1}|WinFormsApp1\\WinFormsApp1.csproj|c:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\views\\winformsapp1\\winformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{093B01F5-B52D-42CF-AABC-FE33889E27A1}|WinFormsApp1\\WinFormsApp1.csproj|solutionrelative:winformsapp1\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -61,7 +61,7 @@
               "RelativeDocumentMoniker": "WinFormsApp1\\Form1.Designer.cs",
               "ToolTip": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Views\\WinFormsApp1\\WinFormsApp1\\Form1.Designer.cs",
               "RelativeToolTip": "WinFormsApp1\\Form1.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAKkEAAAAAAAAAAAQwBUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-13T18:20:07.749Z",
               "EditorCaption": ""
