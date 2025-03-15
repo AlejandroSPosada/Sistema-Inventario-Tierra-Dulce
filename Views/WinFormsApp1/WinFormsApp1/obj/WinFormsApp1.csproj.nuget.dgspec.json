@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\fronted\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {}
+    "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Views\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {}
   },
   "projects": {
-    "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\fronted\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {
+    "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Views\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\fronted\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+        "projectUniqueName": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Views\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
         "projectName": "WinFormsApp1",
-        "projectPath": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\fronted\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
+        "projectPath": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Views\\WinFormsApp1\\WinFormsApp1\\WinFormsApp1.csproj",
         "packagesPath": "C:\\Users\\frank\\.nuget\\packages\\",
-        "outputPath": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\fronted\\WinFormsApp1\\WinFormsApp1\\obj\\",
+        "outputPath": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Views\\WinFormsApp1\\WinFormsApp1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
