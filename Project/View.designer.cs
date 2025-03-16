@@ -37,16 +37,16 @@
             comboBox_ins_mov_finca_destino = new ComboBox();
             comboBox_ins_mov_finca_origen = new ComboBox();
             label_mov_pes_des = new Label();
-            textBox6 = new TextBox();
-            button_insertar1 = new Button();
-            textBox5 = new TextBox();
+            textBox_ins_mov_peso_destino = new TextBox();
+            button_ins_mov = new Button();
+            textBox_ins_mov_peso_origen = new TextBox();
             label_tittle_movimiento = new Label();
             label_mov_pes_ori = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            dateTimePicker_ins_mov_fecha = new DateTimePicker();
             label_mov_fin_des = new Label();
             label_mov_con = new Label();
             label_mov_fec = new Label();
-            textBox1 = new TextBox();
+            textBox_ins_mov_chapeta = new TextBox();
             label_mov_cha = new Label();
             label_mov_fin_ori = new Label();
             tab_compra = new TabPage();
@@ -76,7 +76,7 @@
             button5 = new Button();
             label_tittle_venta = new Label();
             tab_visualizar = new TabPage();
-            tabControl4 = new TabControl();
+            tabControl_vis_ven = new TabControl();
             tab_general = new TabPage();
             dataGridView_por_finca = new DataGridView();
             comboBox_vis_gen_informacion_por_finca = new ComboBox();
@@ -84,10 +84,16 @@
             label26 = new Label();
             dataGridView_general = new DataGridView();
             tabPage4 = new TabPage();
-            label27 = new Label();
+            button_vis_mov_chapeta = new Button();
+            label_vis_mov_chapeta = new Label();
+            textBox_vis_mov_chapeta = new TextBox();
+            label_vis_mov_MOVIMIENTO = new Label();
+            dataGridView_vis_mov = new DataGridView();
             tabPage5 = new TabPage();
-            label34 = new Label();
+            dataGridView_vis_com = new DataGridView();
+            label_vis_com_COMPRA = new Label();
             tabPage6 = new TabPage();
+            dataGridView_vis_ven = new DataGridView();
             label45 = new Label();
             tab_actualizar = new TabPage();
             tabControl3 = new TabControl();
@@ -137,13 +143,16 @@
             tab_compra.SuspendLayout();
             tab_venta.SuspendLayout();
             tab_visualizar.SuspendLayout();
-            tabControl4.SuspendLayout();
+            tabControl_vis_ven.SuspendLayout();
             tab_general.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView_por_finca).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView_general).BeginInit();
             tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_vis_mov).BeginInit();
             tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_vis_com).BeginInit();
             tabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_vis_ven).BeginInit();
             tab_actualizar.SuspendLayout();
             tabControl3.SuspendLayout();
             tabPage1.SuspendLayout();
@@ -192,16 +201,16 @@
             tab_movimiento.Controls.Add(comboBox_ins_mov_finca_destino);
             tab_movimiento.Controls.Add(comboBox_ins_mov_finca_origen);
             tab_movimiento.Controls.Add(label_mov_pes_des);
-            tab_movimiento.Controls.Add(textBox6);
-            tab_movimiento.Controls.Add(button_insertar1);
-            tab_movimiento.Controls.Add(textBox5);
+            tab_movimiento.Controls.Add(textBox_ins_mov_peso_destino);
+            tab_movimiento.Controls.Add(button_ins_mov);
+            tab_movimiento.Controls.Add(textBox_ins_mov_peso_origen);
             tab_movimiento.Controls.Add(label_tittle_movimiento);
             tab_movimiento.Controls.Add(label_mov_pes_ori);
-            tab_movimiento.Controls.Add(dateTimePicker1);
+            tab_movimiento.Controls.Add(dateTimePicker_ins_mov_fecha);
             tab_movimiento.Controls.Add(label_mov_fin_des);
             tab_movimiento.Controls.Add(label_mov_con);
             tab_movimiento.Controls.Add(label_mov_fec);
-            tab_movimiento.Controls.Add(textBox1);
+            tab_movimiento.Controls.Add(textBox_ins_mov_chapeta);
             tab_movimiento.Controls.Add(label_mov_cha);
             tab_movimiento.Controls.Add(label_mov_fin_ori);
             tab_movimiento.Location = new Point(4, 29);
@@ -248,28 +257,29 @@
             label_mov_pes_des.TabIndex = 18;
             label_mov_pes_des.Text = "peso destino";
             // 
-            // textBox6
+            // textBox_ins_mov_peso_destino
             // 
-            textBox6.Location = new Point(189, 422);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(262, 27);
-            textBox6.TabIndex = 17;
+            textBox_ins_mov_peso_destino.Location = new Point(189, 422);
+            textBox_ins_mov_peso_destino.Name = "textBox_ins_mov_peso_destino";
+            textBox_ins_mov_peso_destino.Size = new Size(262, 27);
+            textBox_ins_mov_peso_destino.TabIndex = 17;
             // 
-            // button_insertar1
+            // button_ins_mov
             // 
-            button_insertar1.Location = new Point(238, 486);
-            button_insertar1.Name = "button_insertar1";
-            button_insertar1.Size = new Size(94, 29);
-            button_insertar1.TabIndex = 15;
-            button_insertar1.Text = "insertar";
-            button_insertar1.UseVisualStyleBackColor = true;
+            button_ins_mov.Location = new Point(238, 486);
+            button_ins_mov.Name = "button_ins_mov";
+            button_ins_mov.Size = new Size(94, 29);
+            button_ins_mov.TabIndex = 15;
+            button_ins_mov.Text = "insertar";
+            button_ins_mov.UseVisualStyleBackColor = true;
+            button_ins_mov.Click += button_insertar1_Click;
             // 
-            // textBox5
+            // textBox_ins_mov_peso_origen
             // 
-            textBox5.Location = new Point(189, 365);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(262, 27);
-            textBox5.TabIndex = 14;
+            textBox_ins_mov_peso_origen.Location = new Point(189, 365);
+            textBox_ins_mov_peso_origen.Name = "textBox_ins_mov_peso_origen";
+            textBox_ins_mov_peso_origen.Size = new Size(262, 27);
+            textBox_ins_mov_peso_origen.TabIndex = 14;
             // 
             // label_tittle_movimiento
             // 
@@ -289,12 +299,12 @@
             label_mov_pes_ori.TabIndex = 13;
             label_mov_pes_ori.Text = "peso origen";
             // 
-            // dateTimePicker1
+            // dateTimePicker_ins_mov_fecha
             // 
-            dateTimePicker1.Location = new Point(189, 194);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(262, 27);
-            dateTimePicker1.TabIndex = 12;
+            dateTimePicker_ins_mov_fecha.Location = new Point(189, 194);
+            dateTimePicker_ins_mov_fecha.Name = "dateTimePicker_ins_mov_fecha";
+            dateTimePicker_ins_mov_fecha.Size = new Size(262, 27);
+            dateTimePicker_ins_mov_fecha.TabIndex = 12;
             // 
             // label_mov_fin_des
             // 
@@ -323,12 +333,12 @@
             label_mov_fec.TabIndex = 11;
             label_mov_fec.Text = "fecha";
             // 
-            // textBox1
+            // textBox_ins_mov_chapeta
             // 
-            textBox1.Location = new Point(189, 80);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(262, 27);
-            textBox1.TabIndex = 1;
+            textBox_ins_mov_chapeta.Location = new Point(189, 80);
+            textBox_ins_mov_chapeta.Name = "textBox_ins_mov_chapeta";
+            textBox_ins_mov_chapeta.Size = new Size(262, 27);
+            textBox_ins_mov_chapeta.TabIndex = 1;
             // 
             // label_mov_cha
             // 
@@ -597,7 +607,7 @@
             // 
             // tab_visualizar
             // 
-            tab_visualizar.Controls.Add(tabControl4);
+            tab_visualizar.Controls.Add(tabControl_vis_ven);
             tab_visualizar.Location = new Point(4, 29);
             tab_visualizar.Name = "tab_visualizar";
             tab_visualizar.Padding = new Padding(3);
@@ -606,17 +616,17 @@
             tab_visualizar.Text = "visualizar";
             tab_visualizar.UseVisualStyleBackColor = true;
             // 
-            // tabControl4
+            // tabControl_vis_ven
             // 
-            tabControl4.Controls.Add(tab_general);
-            tabControl4.Controls.Add(tabPage4);
-            tabControl4.Controls.Add(tabPage5);
-            tabControl4.Controls.Add(tabPage6);
-            tabControl4.Location = new Point(6, 9);
-            tabControl4.Name = "tabControl4";
-            tabControl4.SelectedIndex = 0;
-            tabControl4.Size = new Size(974, 679);
-            tabControl4.TabIndex = 1;
+            tabControl_vis_ven.Controls.Add(tab_general);
+            tabControl_vis_ven.Controls.Add(tabPage4);
+            tabControl_vis_ven.Controls.Add(tabPage5);
+            tabControl_vis_ven.Controls.Add(tabPage6);
+            tabControl_vis_ven.Location = new Point(6, 9);
+            tabControl_vis_ven.Name = "tabControl_vis_ven";
+            tabControl_vis_ven.SelectedIndex = 0;
+            tabControl_vis_ven.Size = new Size(974, 679);
+            tabControl_vis_ven.TabIndex = 1;
             // 
             // tab_general
             // 
@@ -683,7 +693,11 @@
             // 
             // tabPage4
             // 
-            tabPage4.Controls.Add(label27);
+            tabPage4.Controls.Add(button_vis_mov_chapeta);
+            tabPage4.Controls.Add(label_vis_mov_chapeta);
+            tabPage4.Controls.Add(textBox_vis_mov_chapeta);
+            tabPage4.Controls.Add(label_vis_mov_MOVIMIENTO);
+            tabPage4.Controls.Add(dataGridView_vis_mov);
             tabPage4.Location = new Point(4, 29);
             tabPage4.Name = "tabPage4";
             tabPage4.Padding = new Padding(3);
@@ -692,18 +706,55 @@
             tabPage4.Text = "movimient";
             tabPage4.UseVisualStyleBackColor = true;
             // 
-            // label27
+            // button_vis_mov_chapeta
             // 
-            label27.AutoSize = true;
-            label27.Location = new Point(235, 41);
-            label27.Name = "label27";
-            label27.Size = new Size(100, 20);
-            label27.TabIndex = 0;
-            label27.Text = "MOVIMIENTO";
+            button_vis_mov_chapeta.Location = new Point(676, 95);
+            button_vis_mov_chapeta.Name = "button_vis_mov_chapeta";
+            button_vis_mov_chapeta.Size = new Size(94, 29);
+            button_vis_mov_chapeta.TabIndex = 5;
+            button_vis_mov_chapeta.Text = "buscar";
+            button_vis_mov_chapeta.UseVisualStyleBackColor = true;
+            button_vis_mov_chapeta.Click += button_vis_mov_chapeta_Click;
+            // 
+            // label_vis_mov_chapeta
+            // 
+            label_vis_mov_chapeta.AutoSize = true;
+            label_vis_mov_chapeta.Location = new Point(294, 98);
+            label_vis_mov_chapeta.Name = "label_vis_mov_chapeta";
+            label_vis_mov_chapeta.Size = new Size(62, 20);
+            label_vis_mov_chapeta.TabIndex = 4;
+            label_vis_mov_chapeta.Text = "chapeta";
+            // 
+            // textBox_vis_mov_chapeta
+            // 
+            textBox_vis_mov_chapeta.Location = new Point(385, 95);
+            textBox_vis_mov_chapeta.Name = "textBox_vis_mov_chapeta";
+            textBox_vis_mov_chapeta.Size = new Size(262, 27);
+            textBox_vis_mov_chapeta.TabIndex = 3;
+            // 
+            // label_vis_mov_MOVIMIENTO
+            // 
+            label_vis_mov_MOVIMIENTO.AutoSize = true;
+            label_vis_mov_MOVIMIENTO.Location = new Point(452, 38);
+            label_vis_mov_MOVIMIENTO.Name = "label_vis_mov_MOVIMIENTO";
+            label_vis_mov_MOVIMIENTO.Size = new Size(100, 20);
+            label_vis_mov_MOVIMIENTO.TabIndex = 2;
+            label_vis_mov_MOVIMIENTO.Text = "MOVIMIENTO";
+            // 
+            // dataGridView_vis_mov
+            // 
+            dataGridView_vis_mov.BackgroundColor = SystemColors.ControlLightLight;
+            dataGridView_vis_mov.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView_vis_mov.Location = new Point(90, 183);
+            dataGridView_vis_mov.Name = "dataGridView_vis_mov";
+            dataGridView_vis_mov.RowHeadersWidth = 51;
+            dataGridView_vis_mov.Size = new Size(818, 365);
+            dataGridView_vis_mov.TabIndex = 1;
             // 
             // tabPage5
             // 
-            tabPage5.Controls.Add(label34);
+            tabPage5.Controls.Add(dataGridView_vis_com);
+            tabPage5.Controls.Add(label_vis_com_COMPRA);
             tabPage5.Location = new Point(4, 29);
             tabPage5.Name = "tabPage5";
             tabPage5.Padding = new Padding(3);
@@ -712,17 +763,28 @@
             tabPage5.Text = "compra";
             tabPage5.UseVisualStyleBackColor = true;
             // 
-            // label34
+            // dataGridView_vis_com
             // 
-            label34.AutoSize = true;
-            label34.Location = new Point(244, 35);
-            label34.Name = "label34";
-            label34.Size = new Size(69, 20);
-            label34.TabIndex = 19;
-            label34.Text = "COMPRA";
+            dataGridView_vis_com.BackgroundColor = SystemColors.ControlLightLight;
+            dataGridView_vis_com.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView_vis_com.Location = new Point(83, 94);
+            dataGridView_vis_com.Name = "dataGridView_vis_com";
+            dataGridView_vis_com.RowHeadersWidth = 51;
+            dataGridView_vis_com.Size = new Size(818, 365);
+            dataGridView_vis_com.TabIndex = 20;
+            // 
+            // label_vis_com_COMPRA
+            // 
+            label_vis_com_COMPRA.AutoSize = true;
+            label_vis_com_COMPRA.Location = new Point(457, 44);
+            label_vis_com_COMPRA.Name = "label_vis_com_COMPRA";
+            label_vis_com_COMPRA.Size = new Size(69, 20);
+            label_vis_com_COMPRA.TabIndex = 19;
+            label_vis_com_COMPRA.Text = "COMPRA";
             // 
             // tabPage6
             // 
+            tabPage6.Controls.Add(dataGridView_vis_ven);
             tabPage6.Controls.Add(label45);
             tabPage6.Location = new Point(4, 29);
             tabPage6.Name = "tabPage6";
@@ -731,10 +793,20 @@
             tabPage6.Text = "venta";
             tabPage6.UseVisualStyleBackColor = true;
             // 
+            // dataGridView_vis_ven
+            // 
+            dataGridView_vis_ven.BackgroundColor = SystemColors.ControlLightLight;
+            dataGridView_vis_ven.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView_vis_ven.Location = new Point(93, 91);
+            dataGridView_vis_ven.Name = "dataGridView_vis_ven";
+            dataGridView_vis_ven.RowHeadersWidth = 51;
+            dataGridView_vis_ven.Size = new Size(818, 365);
+            dataGridView_vis_ven.TabIndex = 20;
+            // 
             // label45
             // 
             label45.AutoSize = true;
-            label45.Location = new Point(241, 32);
+            label45.Location = new Point(457, 36);
             label45.Name = "label45";
             label45.Size = new Size(54, 20);
             label45.TabIndex = 19;
@@ -1143,17 +1215,20 @@
             tab_venta.ResumeLayout(false);
             tab_venta.PerformLayout();
             tab_visualizar.ResumeLayout(false);
-            tabControl4.ResumeLayout(false);
+            tabControl_vis_ven.ResumeLayout(false);
             tab_general.ResumeLayout(false);
             tab_general.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView_por_finca).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView_general).EndInit();
             tabPage4.ResumeLayout(false);
             tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_vis_mov).EndInit();
             tabPage5.ResumeLayout(false);
             tabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_vis_com).EndInit();
             tabPage6.ResumeLayout(false);
             tabPage6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_vis_ven).EndInit();
             tab_actualizar.ResumeLayout(false);
             tabControl3.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
@@ -1174,17 +1249,17 @@
         private TabPage tab_actualizar;
         private Label label_mov_con;
         private Label label_mov_cha;
-        private TextBox textBox1;
-        private TextBox textBox5;
+        private TextBox textBox_ins_mov_chapeta;
+        private TextBox textBox_ins_mov_peso_origen;
         private Label label_mov_pes_ori;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dateTimePicker_ins_mov_fecha;
         private Label label_mov_fec;
         private Label label_mov_fin_ori;
         private Label label_mov_fin_des;
         private TabControl tabControl2;
         private TabPage tab_movimiento;
         private TabPage tab_compra;
-        private Button button_insertar1;
+        private Button button_ins_mov;
         private Button button_insetar2;
         private Label label_peso2;
         private Label label_concepto2;
@@ -1234,7 +1309,7 @@
         private Label label19;
         private DateTimePicker dateTimePicker6;
         private Label label20;
-        private TextBox textBox6;
+        private TextBox textBox_ins_mov_peso_destino;
         private Label label_mov_pes_des;
         private Button button1;
         private Label label_tittle_compra;
@@ -1246,7 +1321,6 @@
         private TextBox textBox11;
         private Label label_finca2;
         private Label label_com_des;
-        private Label label27;
         private TextBox textBox24;
         private Button button5;
         private TextBox textBox25;
@@ -1260,7 +1334,6 @@
         private TextBox textBox28;
         private TextBox textBox29;
         private Label label33;
-        private Label label34;
         private ComboBox comboBox2;
         private ComboBox comboBox_ins_com_proveedor;
         private ComboBox comboBox_ins_mov_finca_destino;
@@ -1276,20 +1349,28 @@
         private TextBox textBox3;
         private Label label21;
         private Label label25;
-        private TabControl tabControl4;
-        private TabPage tab_general;
-        private TabPage tabPage4;
-        private TabPage tabPage5;
-        private TabPage tabPage6;
-        private Label label45;
         private TextBox textBox4;
         private DateTimePicker dateTimePicker3;
         private TextBox textBox7;
         private ComboBox comboBox_ins_com_finca;
-        private DataGridView dataGridView_general;
-        private Label label26;
+        private TabControl tabControl_vis_ven;
+        private TabPage tab_general;
+        private DataGridView dataGridView_por_finca;
         private ComboBox comboBox_vis_gen_informacion_por_finca;
         private Label label28;
-        private DataGridView dataGridView_por_finca;
+        private Label label26;
+        private DataGridView dataGridView_general;
+        private TabPage tabPage4;
+        private Button button_vis_mov_chapeta;
+        private Label label_vis_mov_chapeta;
+        private TextBox textBox_vis_mov_chapeta;
+        private Label label_vis_mov_MOVIMIENTO;
+        private DataGridView dataGridView_vis_mov;
+        private TabPage tabPage5;
+        private DataGridView dataGridView_vis_com;
+        private Label label_vis_com_COMPRA;
+        private TabPage tabPage6;
+        private DataGridView dataGridView_vis_ven;
+        private Label label45;
     }
 }
