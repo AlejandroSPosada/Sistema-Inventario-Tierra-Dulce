@@ -11,6 +11,7 @@ using Project.ModelLayer;
 using View;
 using System.Runtime.CompilerServices;
 using System.Numerics;
+using OfficeOpenXml.Drawing.Chart;
 
 
 namespace Project.PresenterLayer
@@ -40,6 +41,11 @@ namespace Project.PresenterLayer
             return model.button_vis_mov_chapeta_Click_Model(text);
         }
 
+        public void ExportExcelPresenter()
+        {
+            model.ExportExcelModel();
+        }
+
         public void Insert_Movimiento_Presenter(
             string chapeta,
             int concepto,
@@ -47,9 +53,47 @@ namespace Project.PresenterLayer
             int fincaOrigen,
             int fincaDestino,
             int pesoOrigen,
-            int pesoDestino
+            int pesoDestino,
+            int animalTipo
         )
         {
+            if(fincaOrigen == fincaDestino)
+            {
+                view.ShowMessage("Las fincas no pueden coincidir.");
+                return;
+            }
+            //si el animal no existe, entonces sí o sí 
+            // - la finca de origen es nula
+            // - el concepto es compra o nacimiento
+            bool exists = model.AnimalExists(chapeta);
+            if (!exists)
+            {
+                if((concepto == 5 || concepto == 3) && fincaOrigen == -1)
+                {
+                    model.InsertAnimal(chapeta, animalTipo);
+                } 
+                 else if(fincaOrigen != -1)
+                {
+                    view.ShowMessage("El animal no puede tener finca origen.");
+                    return;
+                } 
+                else
+                {
+                    view.ShowMessage("El animal es nuevo, pero el concepto no es ni compra ni nacimiento.");
+                    return;
+                }
+            }
+            if(exists && (concepto == 5 || concepto == 2))
+            {
+                view.ShowMessage("El animal existe, por lo que el concepto no puede ser ni compra ni nacimiento.");
+                return;
+            }
+            if(fincaDestino == -1 && !(concepto == 4 || concepto == 1))
+            {
+                view.ShowMessage("Debe colocar un destino valido.");
+                return;
+            }
+
             Movimiento movimiento = new Movimiento
             {
                 Chapeta = chapeta,
@@ -60,11 +104,45 @@ namespace Project.PresenterLayer
                 PesoOrigen = pesoOrigen,
                 PesoDestino = pesoDestino
             };
-
             bool success = model.InsertMovimiento(movimiento);
-
-            // ✅ Notify the View
-            //view.ShowMessage(success ? "Movimiento insertado con éxito" : "Error al insertar");
         }
+        public void Insert_Compra_Presenter(
+            int finca,
+            string idProveedor,
+            DateTime fecha,
+            int pesoDespacho,
+            string factura
+        )
+        {
+            Compra compra = new Compra
+            {
+                Finca = finca,
+                IdProveedor = idProveedor,
+                Fecha = fecha,
+                PesoDespacho = pesoDespacho,
+                Factura = factura
+            };
+            bool success = model.InsertCompra(compra);
+        }
+        public void Insert_Venta_Presenter(
+            int finca,
+            string idCliente,
+            DateTime fecha,
+            int pesoDespacho,
+            string factura
+        )
+        {
+            Venta venta = new Venta
+            {
+                Finca = finca,
+                IdCliente = idCliente,
+                Fecha = fecha,
+                PesoDespacho = pesoDespacho,
+                Factura = factura
+            };
+            bool success = model.InsertVenta(venta);
+        }
+
+
     }
 }

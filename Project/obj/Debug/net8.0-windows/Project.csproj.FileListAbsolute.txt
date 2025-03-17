@@ -154,3 +154,11 @@ C:\baul\projects\sistema-inventario-tierra-dulce-local\Project\obj\Debug\net8.0-
 C:\baul\projects\sistema-inventario-tierra-dulce-local\Project\obj\Debug\net8.0-windows\Project.pdb
 C:\baul\projects\sistema-inventario-tierra-dulce-local\Project\obj\Debug\net8.0-windows\Project.genruntimeconfig.cache
 C:\baul\projects\sistema-inventario-tierra-dulce-local\Project\obj\Debug\net8.0-windows\ref\Project.dll
+C:\baul\projects\sistema-inventario-tierra-dulce-local\Project\bin\Debug\net8.0-windows\ClosedXML.dll
+C:\baul\projects\sistema-inventario-tierra-dulce-local\Project\bin\Debug\net8.0-windows\ClosedXML.Parser.dll
+C:\baul\projects\sistema-inventario-tierra-dulce-local\Project\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.dll
+C:\baul\projects\sistema-inventario-tierra-dulce-local\Project\bin\Debug\net8.0-windows\DocumentFormat.OpenXml.Framework.dll
+C:\baul\projects\sistema-inventario-tierra-dulce-local\Project\bin\Debug\net8.0-windows\ExcelNumberFormat.dll
+C:\baul\projects\sistema-inventario-tierra-dulce-local\Project\bin\Debug\net8.0-windows\RBush.dll
+C:\baul\projects\sistema-inventario-tierra-dulce-local\Project\bin\Debug\net8.0-windows\SixLabors.Fonts.dll
+C:\baul\projects\sistema-inventario-tierra-dulce-local\Project\bin\Debug\net8.0-windows\System.IO.Packaging.dll

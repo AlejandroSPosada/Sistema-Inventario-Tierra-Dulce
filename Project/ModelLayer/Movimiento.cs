@@ -34,12 +34,6 @@ namespace Project.ModelLayer
             PesoOrigen = pesoOrigen;
             PesoDestino = pesoDestino;
         }
-
-        public void Insert()
-        {
-
-        }
-
     }
 }
 
