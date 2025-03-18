@@ -138,6 +138,7 @@
             label18 = new Label();
             label19 = new Label();
             tabPage3 = new TabPage();
+            textBox1 = new TextBox();
             button_act_com_id_venta = new Button();
             label35 = new Label();
             comboBox_act_ven_finca = new ComboBox();
@@ -154,7 +155,6 @@
             label33 = new Label();
             tab_extraer = new TabPage();
             pictureBox1 = new PictureBox();
-            textBox1 = new TextBox();
             tabControl1.SuspendLayout();
             tab_insertar.SuspendLayout();
             tabControl2.SuspendLayout();
@@ -1263,6 +1263,13 @@
             tabPage3.Text = "venta";
             tabPage3.UseVisualStyleBackColor = true;
             // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(65, 229);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(125, 27);
+            textBox1.TabIndex = 48;
+            // 
             // button_act_com_id_venta
             // 
             button_act_com_id_venta.Location = new Point(77, 277);
@@ -1402,13 +1409,6 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
-            // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(66, 126);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 48;
             // 
             // View1
             // 

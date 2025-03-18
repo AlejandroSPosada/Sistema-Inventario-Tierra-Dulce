@@ -226,7 +226,15 @@ namespace View{
         {
             string connectionString = @"Data Source=(localdb)\sis_inv;Initial Catalog=sis_inv_database;Integrated Security=True;";
             string query = "SELECT * FROM movimiento WHERE id = @id";
-            int idMovimiento = Convert.ToInt32(textBox_act_mov_id_movimiento.Text);
+            int idMovimiento = -1;
+            try
+            {
+                idMovimiento = Convert.ToInt32(textBox_act_mov_id_movimiento.Text);
+            }
+            catch(Exception ex)
+            {
+                this.ShowMessage("El id ingresado no es váldio.");
+            }
             try
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -247,10 +255,10 @@ namespace View{
                             if (reader.Read())
                             {
                                 textBox_act_mov_chapeta.Text = reader["id_animal"].ToString();
-                                comboBox_act_mov_concepto.Text = reader["id_concepto"].ToString();
+                                comboBox_act_mov_concepto.SelectedValue = Convert.ToInt32(reader["id_concepto"]);
                                 dateTimePicker_act_mov_fecha.Value = Convert.ToDateTime(reader["fecha"]);
-                                comboBox_act_mov_finca_origen.Text = reader["id_finca_origen"].ToString();
-                                comboBox_act_mov_finca_destino.Text = reader["id_finca_destino"].ToString();
+                                comboBox_act_mov_finca_origen.SelectedValue = Convert.ToInt32(reader["id_finca_origen"]);
+                                comboBox_act_mov_finca_destino.SelectedValue = Convert.ToInt32(reader["id_finca_destino"]);
                                 textBox_act_mov_peso_origen.Text = reader["peso_origen"] != DBNull.Value ? reader["peso_origen"].ToString() : "";
                                 textBox_act_mov_peso_destino.Text = reader["peso_destino"] != DBNull.Value ? reader["peso_destino"].ToString() : "";
                             }
@@ -288,8 +296,9 @@ namespace View{
 
                             if (reader.Read())
                             {
-                                comboBox_act_com_finca.Text = reader["id_finca"].ToString();
-                                comboBox_act_com_proveedor.Text = reader["id_proveedor"].ToString();
+                               
+                                comboBox_act_com_finca.SelectedValue = Convert.ToInt32(reader["id_finca"]);
+                                comboBox_act_com_proveedor.SelectedValue = reader["id_proveedor"] != DBNull.Value ? reader["id_proveedor"].ToString() : "";
                                 dateTimePicker_act_com_fecha.Value = Convert.ToDateTime(reader["fecha"]);
                                 textBox_act_com_peso_despacho.Text = reader["peso_despacho"] != DBNull.Value ? reader["peso_despacho"].ToString() : "";
                                 textBox_act_com_factura.Text = reader["factura"] != DBNull.Value ? reader["factura"].ToString() : "";
@@ -309,6 +318,7 @@ namespace View{
             string connectionString = @"Data Source=(localdb)\sis_inv;Initial Catalog=sis_inv_database;Integrated Security=True;";
             string query = "SELECT * FROM venta WHERE id = @id";
             int idVenta = Convert.ToInt32(textBox1.Text);
+            this.ShowMessage(textBox1.Text);
             try
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
@@ -328,8 +338,8 @@ namespace View{
 
                             if (reader.Read())
                             {
-                                comboBox_act_ven_finca.Text = reader["id_finca"].ToString();
-                                comboBox_act_ven_cliente.Text = reader["id_cliente"].ToString();
+                                comboBox_act_ven_finca.SelectedValue = Convert.ToInt32(reader["id_finca"]);
+                                comboBox_act_ven_cliente.SelectedValue = reader["id_cliente"] != DBNull.Value ? reader["id_cliente"].ToString() : "";
                                 dateTimePicker_act_ven_fecha.Value = Convert.ToDateTime(reader["fecha"]);
                                 textBox_act_ven_peso_despacho.Text = reader["peso_despacho"] != DBNull.Value ? reader["peso_despacho"].ToString() : "";
                                 textBox_act_ven_factura.Text = reader["factura"] != DBNull.Value ? reader["factura"].ToString() : "";
