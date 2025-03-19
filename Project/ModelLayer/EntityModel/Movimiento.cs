@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Project.ModelLayer
+namespace Project.ModelLayer.EntityModel
 {
     public class Movimiento
     {

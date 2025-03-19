@@ -12,7 +12,10 @@ using View;
 using System.Runtime.CompilerServices;
 using System.Numerics;
 using OfficeOpenXml.Drawing.Chart;
-
+using Project.ModelLayer.EntityModel;
+using Project.MessageSystem;
+using Project.ModelLayer.Helpers;
+using Project.ModelLayer.Repository;
 
 namespace Project.PresenterLayer
 {
@@ -20,20 +23,28 @@ namespace Project.PresenterLayer
     {
         private Model model;
         private readonly View1 view;
+        private readonly IMovimientoRepository _repository;
 
         public Presenter(View1 view)
         {
             this.view = view;
             model = new Model();
-        }
-        public void Show_Initial_Presenter()
-        {
-            view.Show_Initial_DataGrid_View(model.Show_Initial_DataGrid_Model());
+            _repository = repository;
         }
 
-        public void Show_Animals_In_Finca_Order_Presenter(int id)
+        public Movimiento GetMovimientoById(string id)
         {
-            view.Show_Animals_In_Finca_Order_Receive(model.Show_Animals_In_Finca_Order_Model(id));
+            return _repository.SearchByID(id);
+        }
+        public void InitializeInventoryPresenter()
+        {
+            List<DataTable> myList = model.InitializeInventoryModel();
+            view.InitializeInventoryView(myList);
+        }
+
+        public void ShowAnimalesFincaPresenter(int input)
+        {
+            view.ShowAnimalPorFincaView(model.Show_Animals_In_Finca_Order_Model(input));
         }
 
         public DataTable button_vis_mov_chapeta_Click_Presenter(string text)
@@ -59,7 +70,7 @@ namespace Project.PresenterLayer
         {
             if(fincaOrigen == fincaDestino)
             {
-                view.ShowMessage("Las fincas no pueden coincidir.");
+                ShowMessages.ShowMessage("Las fincas no pueden coincidir.");
                 return;
             }
             //si el animal no existe, entonces sí o sí 
@@ -74,23 +85,23 @@ namespace Project.PresenterLayer
                 } 
                  else if(fincaOrigen != -1)
                 {
-                    view.ShowMessage("El animal no puede tener finca origen.");
+                    ShowMessages.ShowMessage("El animal no puede tener finca origen.");
                     return;
                 } 
                 else
                 {
-                    view.ShowMessage("El animal es nuevo, pero el concepto no es ni compra ni nacimiento.");
+                    ShowMessages.ShowMessage("El animal es nuevo, pero el concepto no es ni compra ni nacimiento.");
                     return;
                 }
             }
             if(exists && (concepto == 5 || concepto == 2))
             {
-                view.ShowMessage("El animal existe, por lo que el concepto no puede ser ni compra ni nacimiento.");
+                ShowMessages.ShowMessage("El animal existe, por lo que el concepto no puede ser ni compra ni nacimiento.");
                 return;
             }
             if(fincaDestino == -1 && !(concepto == 4 || concepto == 1))
             {
-                view.ShowMessage("Debe colocar un destino valido.");
+                ShowMessages.ShowMessage("Debe colocar un destino valido.");
                 return;
             }
 
@@ -143,6 +154,6 @@ namespace Project.PresenterLayer
             bool success = model.InsertVenta(venta);
         }
 
-
+        
     }
 }

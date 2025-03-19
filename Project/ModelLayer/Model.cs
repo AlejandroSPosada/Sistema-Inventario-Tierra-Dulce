@@ -11,69 +11,42 @@ using ClosedXML.Excel;
 using Microsoft.Data.SqlClient;
 using Microsoft.Identity.Client;
 using Project.PresenterLayer;
-
+using Project.ModelLayer.Helpers;
+using Project.ModelLayer.EntityModel;
 namespace Project.ModelLayer
 {
     class Model
-    {
+    {   
         public Movimiento movimiento;
         private string connectionString = "Data Source=(localdb)\\sis_inv;Initial Catalog=sis_inv_database;Integrated Security=True;";
-        private string query_inf_gen = "EXEC GetDynamicAnimalReport";
-        private string get_table_finca = "SELECT*FROM finca";
-        private string get_table_concepto = "SELECT*FROM concepto";
-        private string get_table_proveedor = "SELECT*FROM proveedor ORDER BY 'nombre'";
-        private string get_tabe_cliente = "SELECT*FROM cliente ORDER BY 'nombre'";
+
         public Model()
         {
             this.movimiento = new Movimiento();
         }
 
-        public List<DataTable> Show_Initial_DataGrid_Model()
+        public List<DataTable> InitializeInventoryModel()
         {
             return new List<DataTable> {
-            GetDataTable(get_table_finca),
-            GetDataTable(get_table_concepto),
-            GetDataTable(get_table_proveedor),
-            GetDataTable(get_tabe_cliente),
-            GetDataTable(query_inf_gen),
-            GetDataTable("EXEC select_compra"),
-            GetDataTable("EXEC select_venta"),
-            GetDataTable("SELECT*FROM animal_tipo")
+                SqlHelper.GetDataTable(SqlHelper.Finca),
+                SqlHelper.GetDataTable(SqlHelper.Concepto),
+                SqlHelper.GetDataTable(SqlHelper.Proveedor),
+                SqlHelper.GetDataTable(SqlHelper.Cliente),
+                SqlHelper.GetDataTable(SqlHelper.ProcedureGetDynamicAnimalReport),
+                SqlHelper.GetDataTable(SqlHelper.ProcedureSelectCompra),
+                SqlHelper.GetDataTable(SqlHelper.ProcedureSelectVenta),
+                SqlHelper.GetDataTable(SqlHelper.AnimalTipo)
             };
-        }
-        
-        private DataTable GetDataTable(string query)
-        {
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            {
-                try
-                {
-                    conn.Open();
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                        DataTable dt = new DataTable();
-                        adapter.Fill(dt);
-                        return dt;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error: " + ex.Message);
-                    return null;
-                }
-            }
         }
 
         public DataTable Show_Animals_In_Finca_Order_Model(int id)
         {
-            return GetDataTable("EXEC show_animals_in_finca '" + id + "'");
+            return SqlHelper.GetDataTable("EXEC show_animals_in_finca '" + id + "'");
         }
 
         public DataTable button_vis_mov_chapeta_Click_Model(string text)
         {
-            string query = "EXEC show_movimientos_of_animal @Chapeta";
-            return GetDataTable("EXEC show_movimientos_of_animal '" + text +"'");
+            return SqlHelper.GetDataTable("EXEC show_movimientos_of_animal '" + text + "'");
         }
         //INSERT PART
         public bool InsertMovimiento(Movimiento movimiento)
@@ -244,6 +217,36 @@ namespace Project.ModelLayer
             {
                 MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        public DataTable ExecuteStoredProcedure(string procedureName, Dictionary<string, object> parameters)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    using (SqlCommand command = new SqlCommand(procedureName, connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+
+                        foreach (var param in parameters)
+                        {
+                            command.Parameters.AddWithValue(param.Key, param.Value);
+                        }
+
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(dt);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Database error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return dt;
         }
     }
 }

@@ -1,30 +1,29 @@
 ﻿using System;
 
-namespace Project.ModelLayer
+namespace Project.ModelLayer.EntityModel
 {
-    public class Venta
+    public class Compra
     {
         public int Finca { get; set; }
-        public string IdCliente { get; set; }
+        public string IdProveedor { get; set; }
         public DateTime Fecha { get; set; }
         public int PesoDespacho { get; set; }
         public string Factura { get; set; }
 
-
-        public Venta()
+        public Compra()
         {
             Finca = 0;
             Fecha = DateTime.Now;
-            IdCliente = "";
+            IdProveedor = "";
             PesoDespacho = 0;
             Factura = "";
         }
 
-        public Venta(int finca, string idCliente, DateTime fecha, int pesoDespacho, string factura)
+        public Compra(int finca, string idCliente, DateTime fecha, int pesoDespacho, string factura)
         {
             Finca = finca;
             Fecha = fecha;
-            IdCliente = idCliente;
+            IdProveedor = idCliente;
             PesoDespacho = pesoDespacho;
             Factura = factura;
         }
