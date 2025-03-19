@@ -3,24 +3,56 @@
   "WorkspaceRootPath": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{093B01F5-B52D-42CF-AABC-FE33889E27A1}|Project\\Project.csproj|c:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\project\\modellayer\\repository\\movimientorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{093B01F5-B52D-42CF-AABC-FE33889E27A1}|Project\\Project.csproj|solutionrelative:project\\modellayer\\repository\\movimientorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{093B01F5-B52D-42CF-AABC-FE33889E27A1}|Project\\Project.csproj|c:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\project\\presenterlayer\\presenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{093B01F5-B52D-42CF-AABC-FE33889E27A1}|Project\\Project.csproj|solutionrelative:project\\presenterlayer\\presenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{093B01F5-B52D-42CF-AABC-FE33889E27A1}|Project\\Project.csproj|c:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\project\\modellayer\\repository\\repositoryfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{093B01F5-B52D-42CF-AABC-FE33889E27A1}|Project\\Project.csproj|solutionrelative:project\\modellayer\\repository\\repositoryfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{093B01F5-B52D-42CF-AABC-FE33889E27A1}|Project\\Project.csproj|c:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\project\\modellayer\\repository\\ianimalrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{093B01F5-B52D-42CF-AABC-FE33889E27A1}|Project\\Project.csproj|solutionrelative:project\\modellayer\\repository\\ianimalrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{093B01F5-B52D-42CF-AABC-FE33889E27A1}|Project\\Project.csproj|c:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\project\\modellayer\\repository\\animalrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{093B01F5-B52D-42CF-AABC-FE33889E27A1}|Project\\Project.csproj|solutionrelative:project\\modellayer\\repository\\animalrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{093B01F5-B52D-42CF-AABC-FE33889E27A1}|Project\\Project.csproj|c:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\project\\modellayer\\helpers\\sqlhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{093B01F5-B52D-42CF-AABC-FE33889E27A1}|Project\\Project.csproj|solutionrelative:project\\modellayer\\helpers\\sqlhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{093B01F5-B52D-42CF-AABC-FE33889E27A1}|Project\\Project.csproj|c:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\project\\modellayer\\model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{093B01F5-B52D-42CF-AABC-FE33889E27A1}|Project\\Project.csproj|solutionrelative:project\\modellayer\\model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{093B01F5-B52D-42CF-AABC-FE33889E27A1}|Project\\Project.csproj|c:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\project\\modellayer\\entitymodel\\animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{093B01F5-B52D-42CF-AABC-FE33889E27A1}|Project\\Project.csproj|solutionrelative:project\\modellayer\\entitymodel\\animal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{093B01F5-B52D-42CF-AABC-FE33889E27A1}|Project\\Project.csproj|c:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\project\\modellayer\\entitymodel\\compra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{093B01F5-B52D-42CF-AABC-FE33889E27A1}|Project\\Project.csproj|solutionrelative:project\\modellayer\\entitymodel\\compra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{093B01F5-B52D-42CF-AABC-FE33889E27A1}|Project\\Project.csproj|c:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\project\\viewlayer\\view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{093B01F5-B52D-42CF-AABC-FE33889E27A1}|Project\\Project.csproj|solutionrelative:project\\viewlayer\\view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{093B01F5-B52D-42CF-AABC-FE33889E27A1}|Project\\Project.csproj|c:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\project\\viewlayer\\update\\view.update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{093B01F5-B52D-42CF-AABC-FE33889E27A1}|Project\\Project.csproj|solutionrelative:project\\viewlayer\\update\\view.update.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{093B01F5-B52D-42CF-AABC-FE33889E27A1}|Project\\Project.csproj|c:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\project\\viewlayer\\view.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{093B01F5-B52D-42CF-AABC-FE33889E27A1}|Project\\Project.csproj|solutionrelative:project\\viewlayer\\view.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{093B01F5-B52D-42CF-AABC-FE33889E27A1}|Project\\Project.csproj|c:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\project\\viewlayer\\view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{093B01F5-B52D-42CF-AABC-FE33889E27A1}|Project\\Project.csproj|solutionrelative:project\\viewlayer\\view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{093B01F5-B52D-42CF-AABC-FE33889E27A1}|Project\\Project.csproj|c:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\project\\globalusings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{093B01F5-B52D-42CF-AABC-FE33889E27A1}|Project\\Project.csproj|solutionrelative:project\\globalusings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{093B01F5-B52D-42CF-AABC-FE33889E27A1}|Project\\Project.csproj|c:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\project\\modellayer\\entitymodel\\movimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{093B01F5-B52D-42CF-AABC-FE33889E27A1}|Project\\Project.csproj|solutionrelative:project\\modellayer\\entitymodel\\movimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{093B01F5-B52D-42CF-AABC-FE33889E27A1}|Project\\Project.csproj|C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\project\\viewlayer\\view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{093B01F5-B52D-42CF-AABC-FE33889E27A1}|Project\\Project.csproj|solutionrelative:project\\viewlayer\\view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,72 +62,139 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 11,
               "Title": "View.cs [Design]",
               "DocumentMoniker": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Project\\ViewLayer\\View.cs",
               "RelativeDocumentMoniker": "Project\\ViewLayer\\View.cs",
-              "ToolTip": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Project\\ViewLayer\\View.cs [Design]*",
-              "RelativeToolTip": "Project\\ViewLayer\\View.cs [Design]*",
+              "ToolTip": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Project\\ViewLayer\\View.cs [Design]",
+              "RelativeToolTip": "Project\\ViewLayer\\View.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T16:15:00.662Z",
+              "WhenOpened": "2025-03-19T12:10:49.704Z",
               "IsPinned": true,
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "View.cs",
               "DocumentMoniker": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Project\\ViewLayer\\View.cs",
               "RelativeDocumentMoniker": "Project\\ViewLayer\\View.cs",
-              "ToolTip": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Project\\ViewLayer\\View.cs*",
-              "RelativeToolTip": "Project\\ViewLayer\\View.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAPAAAAAAAAAA==",
+              "ToolTip": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Project\\ViewLayer\\View.cs",
+              "RelativeToolTip": "Project\\ViewLayer\\View.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAUwEEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T19:19:26.879Z",
+              "WhenOpened": "2025-03-19T12:10:40.638Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GlobalUsings.cs",
-              "DocumentMoniker": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Project\\GlobalUsings.cs",
-              "RelativeDocumentMoniker": "Project\\GlobalUsings.cs",
-              "ToolTip": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Project\\GlobalUsings.cs",
-              "RelativeToolTip": "Project\\GlobalUsings.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAsAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Presenter.cs",
+              "DocumentMoniker": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Project\\PresenterLayer\\Presenter.cs",
+              "RelativeDocumentMoniker": "Project\\PresenterLayer\\Presenter.cs",
+              "ToolTip": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Project\\PresenterLayer\\Presenter.cs*",
+              "RelativeToolTip": "Project\\PresenterLayer\\Presenter.cs*",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAgwGoAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T00:27:22.599Z",
+              "WhenOpened": "2025-03-19T12:10:55.444Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Model.cs",
+              "DocumentMoniker": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Project\\ModelLayer\\Model.cs",
+              "RelativeDocumentMoniker": "Project\\ModelLayer\\Model.cs",
+              "ToolTip": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Project\\ModelLayer\\Model.cs",
+              "RelativeToolTip": "Project\\ModelLayer\\Model.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAswJAAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T12:11:28.02Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RepositoryFactory.cs",
+              "DocumentMoniker": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Project\\ModelLayer\\Repository\\RepositoryFactory.cs",
+              "RelativeDocumentMoniker": "Project\\ModelLayer\\Repository\\RepositoryFactory.cs",
+              "ToolTip": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Project\\ModelLayer\\Repository\\RepositoryFactory.cs*",
+              "RelativeToolTip": "Project\\ModelLayer\\Repository\\RepositoryFactory.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T13:31:05.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IAnimalRepository.cs",
+              "DocumentMoniker": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Project\\ModelLayer\\Repository\\IAnimalRepository.cs",
+              "RelativeDocumentMoniker": "Project\\ModelLayer\\Repository\\IAnimalRepository.cs",
+              "ToolTip": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Project\\ModelLayer\\Repository\\IAnimalRepository.cs*",
+              "RelativeToolTip": "Project\\ModelLayer\\Repository\\IAnimalRepository.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T13:26:17.423Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Movimiento.cs",
-              "DocumentMoniker": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Project\\ModelLayer\\EntityModel\\Movimiento.cs",
-              "RelativeDocumentMoniker": "Project\\ModelLayer\\EntityModel\\Movimiento.cs",
-              "ToolTip": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Project\\ModelLayer\\EntityModel\\Movimiento.cs",
-              "RelativeToolTip": "Project\\ModelLayer\\EntityModel\\Movimiento.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "AnimalRepository.cs",
+              "DocumentMoniker": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Project\\ModelLayer\\Repository\\AnimalRepository.cs",
+              "RelativeDocumentMoniker": "Project\\ModelLayer\\Repository\\AnimalRepository.cs",
+              "ToolTip": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Project\\ModelLayer\\Repository\\AnimalRepository.cs*",
+              "RelativeToolTip": "Project\\ModelLayer\\Repository\\AnimalRepository.cs*",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T00:26:28.063Z",
+              "WhenOpened": "2025-03-19T13:25:58.779Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MovimientoRepository.cs",
-              "DocumentMoniker": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Project\\ModelLayer\\Repository\\MovimientoRepository.cs",
-              "RelativeDocumentMoniker": "Project\\ModelLayer\\Repository\\MovimientoRepository.cs",
-              "ToolTip": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Project\\ModelLayer\\Repository\\MovimientoRepository.cs*",
-              "RelativeToolTip": "Project\\ModelLayer\\Repository\\MovimientoRepository.cs*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAsAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "SqlHelper.cs",
+              "DocumentMoniker": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Project\\ModelLayer\\Helpers\\SqlHelper.cs",
+              "RelativeDocumentMoniker": "Project\\ModelLayer\\Helpers\\SqlHelper.cs",
+              "ToolTip": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Project\\ModelLayer\\Helpers\\SqlHelper.cs*",
+              "RelativeToolTip": "Project\\ModelLayer\\Helpers\\SqlHelper.cs*",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAABWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T00:20:13.773Z",
+              "WhenOpened": "2025-03-19T12:55:39.843Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Compra.cs",
+              "DocumentMoniker": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Project\\ModelLayer\\EntityModel\\Compra.cs",
+              "RelativeDocumentMoniker": "Project\\ModelLayer\\EntityModel\\Compra.cs",
+              "ToolTip": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Project\\ModelLayer\\EntityModel\\Compra.cs",
+              "RelativeToolTip": "Project\\ModelLayer\\EntityModel\\Compra.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T13:25:18.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Animal.cs",
+              "DocumentMoniker": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Project\\ModelLayer\\EntityModel\\Animal.cs",
+              "RelativeDocumentMoniker": "Project\\ModelLayer\\EntityModel\\Animal.cs",
+              "ToolTip": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Project\\ModelLayer\\EntityModel\\Animal.cs*",
+              "RelativeToolTip": "Project\\ModelLayer\\EntityModel\\Animal.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T13:23:06.145Z",
               "EditorCaption": ""
             },
             {
@@ -109,6 +208,45 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "View.designer.cs",
+              "DocumentMoniker": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Project\\ViewLayer\\View.designer.cs",
+              "RelativeDocumentMoniker": "Project\\ViewLayer\\View.designer.cs",
+              "ToolTip": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Project\\ViewLayer\\View.designer.cs",
+              "RelativeToolTip": "Project\\ViewLayer\\View.designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T12:26:23.86Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "GlobalUsings.cs",
+              "DocumentMoniker": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Project\\GlobalUsings.cs",
+              "RelativeDocumentMoniker": "Project\\GlobalUsings.cs",
+              "ToolTip": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Project\\GlobalUsings.cs",
+              "RelativeToolTip": "Project\\GlobalUsings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T12:18:19.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "View.update.cs",
+              "DocumentMoniker": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Project\\ViewLayer\\Update\\View.update.cs",
+              "RelativeDocumentMoniker": "Project\\ViewLayer\\Update\\View.update.cs",
+              "ToolTip": "C:\\baul\\projects\\sistema-inventario-tierra-dulce-local\\Project\\ViewLayer\\Update\\View.update.cs",
+              "RelativeToolTip": "Project\\ViewLayer\\Update\\View.update.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T12:12:31.714Z",
+              "EditorCaption": ""
             }
           ]
         }

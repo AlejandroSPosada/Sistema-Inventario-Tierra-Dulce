@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Identity.Client;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,6 @@ namespace Project.ModelLayer.Repository
 {
     public interface IVentaRepository
     {
+        public Venta SearchByID(string id);
     }
 }

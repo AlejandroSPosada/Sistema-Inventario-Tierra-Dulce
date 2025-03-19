@@ -14,6 +14,7 @@ namespace Project.ModelLayer.Helpers
         public const string ProcedureGetDynamicAnimalReport = "EXEC GetDynamicAnimalReport";
         public const string ProcedureSelectCompra = "EXEC select_compra";
         public const string ProcedureSelectVenta = "EXEC select_venta";
+        public const string FuncAnimalExists = "SELECT dbo.fn_AnimalExists(@Chapeta)";
         public const string Finca = "SELECT*FROM finca";
         public const string Concepto = "SELECT*FROM concepto";
         public const string Proveedor = "SELECT*FROM proveedor ORDER BY nombre"; 

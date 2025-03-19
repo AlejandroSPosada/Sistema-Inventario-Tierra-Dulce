@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Project.ModelLayer.Repository
 {
-    public interface ICompraRepository
+    public interface IAnimalRepository
     {
-        public Compra SearchByID(string id);
+        public bool IdExists(string id);
     }
 }

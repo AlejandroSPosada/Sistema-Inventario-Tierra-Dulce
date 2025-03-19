@@ -1,6 +1,7 @@
 using Microsoft.Data.SqlClient; // If you have issues, switch to System.Data.SqlClient
 using Project.PresenterLayer;
 using Project.MessageSystem;
+using System.Data;
 
 
 namespace View{
@@ -10,7 +11,7 @@ namespace View{
         public View1()
         {
             InitializeComponent();
-            presenter = new Presenter(this);
+            presenter = new Presenter(this, new RepositoryFactory());
             presenter.InitializeInventoryPresenter();
         }
 
@@ -83,38 +84,17 @@ namespace View{
         private void button_act_mov_id_movimiento_Click(object sender, EventArgs e)
         {
             string idMovimiento = textBox_act_mov_id_movimiento.Text;
-            SqlDataReader reader = null;
-            textBox_act_mov_chapeta.Text = reader["id_animal"].ToString();
-            comboBox_act_mov_concepto.SelectedValue = Convert.ToInt32(reader["id_concepto"]);
-            dateTimePicker_act_mov_fecha.Value = Convert.ToDateTime(reader["fecha"]);
-            comboBox_act_mov_finca_origen.SelectedValue = Convert.ToInt32(reader["id_finca_origen"]);
-            comboBox_act_mov_finca_destino.SelectedValue = Convert.ToInt32(reader["id_finca_destino"]);
-            textBox_act_mov_peso_origen.Text = reader["peso_origen"] != DBNull.Value ? reader["peso_origen"].ToString() : "";
-            textBox_act_mov_peso_destino.Text = reader["peso_destino"] != DBNull.Value ? reader["peso_destino"].ToString() : "";
+            presenter.GetMovimientoById(idMovimiento);
         }
-
         private void button_act_com_id_compra_Click(object sender, EventArgs e)
         {
-            string idMovimiento = textBox_act_com_id_compra.Text;
-            SqlDataReader reader = null;
-            comboBox_act_com_finca.SelectedValue = Convert.ToInt32(reader["id_finca"]);
-            comboBox_act_com_proveedor.SelectedValue = reader["id_proveedor"] != DBNull.Value ? reader["id_proveedor"].ToString() : "";
-            dateTimePicker_act_com_fecha.Value = Convert.ToDateTime(reader["fecha"]);
-            textBox_act_com_peso_despacho.Text = reader["peso_despacho"] != DBNull.Value ? reader["peso_despacho"].ToString() : "";
-            textBox_act_com_factura.Text = reader["factura"] != DBNull.Value ? reader["factura"].ToString() : "";
+            string idCompra = textBox_act_com_id_compra.Text;
+            presenter.GetCompraById(idCompra);
         }
-
         private void button_act_com_id_venta_Click(object sender, EventArgs e)
         {
-     
             string idVenta = textBox1.Text;
-            SqlDataReader reader = null;
-            comboBox_act_ven_finca.SelectedValue = Convert.ToInt32(reader["id_finca"]);
-            comboBox_act_ven_cliente.SelectedValue = reader["id_cliente"] != DBNull.Value ? reader["id_cliente"].ToString() : "";
-            dateTimePicker_act_ven_fecha.Value = Convert.ToDateTime(reader["fecha"]);
-            textBox_act_ven_peso_despacho.Text = reader["peso_despacho"] != DBNull.Value ? reader["peso_despacho"].ToString() : "";
-            textBox_act_ven_factura.Text = reader["factura"] != DBNull.Value ? reader["factura"].ToString() : "";
-
+            presenter.GetVentaById(idVenta);
         }
     }
 }

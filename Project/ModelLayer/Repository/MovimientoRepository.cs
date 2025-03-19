@@ -1,4 +1,5 @@
 ﻿using Microsoft.Data.SqlClient;
+using Project.MessageSystem;
 using Project.ModelLayer.EntityModel;
 using Project.ModelLayer.Helpers;
 using System;
@@ -28,12 +29,12 @@ namespace Project.ModelLayer.Repository
                             return new Movimiento
                             {
                                 Chapeta = reader["id_animal"].ToString(),
-                                Concepto = Convert.ToInt32(reader["id_concepto"]),
+                                Concepto = ManageError.reader_int(reader, "id_concepto"),
                                 Fecha = Convert.ToDateTime(reader["fecha"]),
-                                FincaOrigen = Convert.ToInt32(reader["id_finca_origen"]),
-                                FincaDestino = Convert.ToInt32(reader["id_finca_destino"]),
-                                PesoOrigen = Convert.ToInt32(reader["id_concepto"]),
-                                PesoDestino = Convert.ToInt32(reader["id_concepto"])
+                                FincaOrigen = ManageError.reader_int(reader, "id_finca_origen"),
+                                FincaDestino = ManageError.reader_int(reader, "id_finca_destino"),
+                                PesoOrigen = ManageError.reader_int(reader, "peso_origen"),
+                                PesoDestino = ManageError.reader_int(reader, "peso_destino")
                             };
                         }
                     }

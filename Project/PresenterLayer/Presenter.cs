@@ -23,19 +23,48 @@ namespace Project.PresenterLayer
     {
         private Model model;
         private readonly View1 view;
-        private readonly IMovimientoRepository _repository;
+        private readonly RepositoryFactory _repository;
 
-        public Presenter(View1 view)
+        public Presenter(View1 view, RepositoryFactory repository)
         {
             this.view = view;
             model = new Model();
             _repository = repository;
         }
 
-        public Movimiento GetMovimientoById(string id)
+        public void GetMovimientoById(string id)
         {
-            return _repository.SearchByID(id);
+            Movimiento myMovimiento = _repository.MovimientoRepository.SearchByID(id);
+            if (myMovimiento == null)
+            {
+                ShowMessages.ShowMessage("el ID no existe");
+                return;
+            }
+            view.button_act_mov_id_movimiento_Response(myMovimiento);
         }
+
+        public void GetCompraById(string id)
+        {
+            Compra myCompra = _repository.CompraRepository.SearchByID(id);
+            if (myCompra == null)
+            {
+                ShowMessages.ShowMessage("el ID no existe");
+                return;
+            }
+            view.button_act_com_id_compra_Response(myCompra);
+        }
+
+        public void GetVentaById(string id)
+        {
+            Venta myVenta = _repository.VentaRepository.SearchByID(id);
+            if (myVenta == null)
+            {
+                ShowMessages.ShowMessage("el ID no existe");
+                return;
+            }
+            view.button_act_com_id_venta_Response(myVenta);
+        }
+
         public void InitializeInventoryPresenter()
         {
             List<DataTable> myList = model.InitializeInventoryModel();
@@ -76,7 +105,7 @@ namespace Project.PresenterLayer
             //si el animal no existe, entonces sí o sí 
             // - la finca de origen es nula
             // - el concepto es compra o nacimiento
-            bool exists = model.AnimalExists(chapeta);
+            bool exists = _repository.AnimalRepository.IdExists(chapeta);
             if (!exists)
             {
                 if((concepto == 5 || concepto == 3) && fincaOrigen == -1)

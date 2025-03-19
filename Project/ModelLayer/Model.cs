@@ -171,7 +171,7 @@ namespace Project.ModelLayer
         public void ExportExcelModel()
         {
             string connectionString = @"Data Source=(localdb)\sis_inv;Initial Catalog=sis_inv_database;Integrated Security=True;";
-            string query = "EXEC movimiento_names";
+            string query = "EXEC select_movimiento";
 
             DataTable dataTable = new DataTable();
 

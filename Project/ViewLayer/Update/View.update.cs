@@ -74,5 +74,33 @@ namespace View
         {
             dataGridView_por_finca.DataSource = table;
         }
+
+        public void button_act_mov_id_movimiento_Response(Movimiento myMovimiento)
+        {
+            textBox_act_mov_chapeta.Text = myMovimiento.Chapeta;
+            comboBox_act_mov_concepto.SelectedValue = myMovimiento.Concepto;
+            dateTimePicker_act_mov_fecha.Value = myMovimiento.Fecha;
+            comboBox_act_mov_finca_origen.SelectedValue = myMovimiento.FincaOrigen;
+            comboBox_act_mov_finca_destino.SelectedValue = myMovimiento.FincaDestino;
+            textBox_act_mov_peso_origen.Text = myMovimiento.PesoOrigen.ToString();
+            textBox_act_mov_peso_destino.Text = myMovimiento.PesoDestino.ToString();
+        }
+
+        public void button_act_com_id_compra_Response(Compra myCompra)
+        {
+            comboBox_act_com_finca.SelectedValue = myCompra.Finca;
+            comboBox_act_com_proveedor.SelectedValue = myCompra.IdProveedor;
+            dateTimePicker_act_com_fecha.Value = myCompra.Fecha;
+            textBox_act_com_peso_despacho.Text = myCompra.PesoDespacho.ToString();
+            textBox_act_com_factura.Text = myCompra.Factura;
+        }
+
+        public void button_act_com_id_venta_Response(Venta myVenta)
+        {
+            comboBox_act_ven_finca.SelectedValue = myVenta.Finca;
+            comboBox_act_ven_cliente.SelectedValue = myVenta.IdCliente;
+            textBox_act_ven_peso_despacho.Text = myVenta.PesoDespacho.ToString();
+            textBox_act_ven_factura.Text = myVenta.Factura;
+        }
     }
 }
