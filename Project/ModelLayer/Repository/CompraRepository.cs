@@ -1,5 +1,6 @@
 ﻿using Microsoft.Data.SqlClient;
 using Project.MessageSystem;
+using Project.ModelLayer.EntityModel;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -37,6 +38,46 @@ namespace Project.ModelLayer.Repository
                 }
             }
             return null; // Return null if no record found
+        }
+
+        public void DeleteByID(string id)
+        {
+            string query = "DELETE FROM compra WHERE id = @id";
+            using (SqlConnection connection = new SqlConnection(SqlHelper.connectionString))
+            {
+                connection.Open();
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@id", id);
+                    int rowsAffected = command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void UpdateByID(Compra compra, string id)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(SqlHelper.connectionString))
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand("update_compra", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@id", id);
+                        cmd.Parameters.AddWithValue("@id_finca", compra.Finca);
+                        cmd.Parameters.AddWithValue("@id_proveedor", compra.IdProveedor);
+                        cmd.Parameters.AddWithValue("@peso_despacho", compra.PesoDespacho);
+                        cmd.Parameters.AddWithValue("@fecha", compra.Fecha);
+                        cmd.Parameters.AddWithValue("@factura", compra.Factura);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch
+            {
+                ShowMessages.ShowMessage("Hubo un error con el proceso.");
+            }
         }
     }
 }

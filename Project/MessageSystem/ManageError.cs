@@ -9,19 +9,6 @@ namespace Project.MessageSystem
 {
     public static class ManageError
     {
-        public static int string_int(string input, string message)
-        {
-            try
-            {
-                return Convert.ToInt32(input);
-            }
-            catch (FormatException)
-            {
-                ShowMessages.ShowMessage(message);
-                return 0;
-            }
-        }
-
         public static int reader_int(SqlDataReader reader, string get)
         {
             return !reader.IsDBNull(reader.GetOrdinal(get)) ? Convert.ToInt32(reader[get]) : 0;

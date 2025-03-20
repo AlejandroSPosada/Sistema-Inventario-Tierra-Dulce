@@ -79,6 +79,7 @@
             button_ins_ven = new Button();
             label_tittle_venta = new Label();
             tab_visualizar = new TabPage();
+            button_vis_actualizar_información = new Button();
             tabControl_vis_ven = new TabControl();
             tab_general = new TabPage();
             dataGridView_por_finca = new DataGridView();
@@ -102,15 +103,17 @@
             tab_actualizar = new TabPage();
             tabControl3 = new TabControl();
             tabPage1 = new TabPage();
+            labbel_act_mov_chapeta = new Label();
+            button_act_mov_eliminar = new Button();
             textBox_act_mov_id_movimiento = new TextBox();
-            button_act_mov_id_movimiento = new Button();
+            button_act_mov_ingresar = new Button();
             label4 = new Label();
             comboBox_act_mov_concepto = new ComboBox();
             comboBox_act_mov_finca_destino = new ComboBox();
             comboBox_act_mov_finca_origen = new ComboBox();
             label6 = new Label();
             textBox_act_mov_peso_destino = new TextBox();
-            button2 = new Button();
+            button_act_mov_actualizar = new Button();
             textBox_act_mov_peso_origen = new TextBox();
             label7 = new Label();
             label8 = new Label();
@@ -118,19 +121,19 @@
             label9 = new Label();
             label10 = new Label();
             label11 = new Label();
-            textBox_act_mov_chapeta = new TextBox();
             label12 = new Label();
             label13 = new Label();
             tabPage2 = new TabPage();
+            button_act_com_eliminar = new Button();
             textBox_act_com_id_compra = new TextBox();
-            button_act_com_id_compra = new Button();
+            button_act_com_ingresar = new Button();
             label5 = new Label();
             textBox_act_com_factura = new TextBox();
             dateTimePicker_act_com_fecha = new DateTimePicker();
             textBox_act_com_peso_despacho = new TextBox();
             comboBox_act_com_finca = new ComboBox();
             comboBox_act_com_proveedor = new ComboBox();
-            button3 = new Button();
+            button_act_com_actualizar = new Button();
             label14 = new Label();
             label15 = new Label();
             label16 = new Label();
@@ -138,8 +141,9 @@
             label18 = new Label();
             label19 = new Label();
             tabPage3 = new TabPage();
-            textBox1 = new TextBox();
-            button_act_com_id_venta = new Button();
+            button_act_ven_eliminar = new Button();
+            textBox_act_ven_id_venta = new TextBox();
+            button_act_ven_ingresar = new Button();
             label35 = new Label();
             comboBox_act_ven_finca = new ComboBox();
             comboBox_act_ven_cliente = new ComboBox();
@@ -151,7 +155,7 @@
             textBox_act_ven_peso_despacho = new TextBox();
             label31 = new Label();
             label32 = new Label();
-            button4 = new Button();
+            button_act_ven_actualizar = new Button();
             label33 = new Label();
             tab_extraer = new TabPage();
             pictureBox1 = new PictureBox();
@@ -658,6 +662,7 @@
             // 
             // tab_visualizar
             // 
+            tab_visualizar.Controls.Add(button_vis_actualizar_información);
             tab_visualizar.Controls.Add(tabControl_vis_ven);
             tab_visualizar.Location = new Point(4, 29);
             tab_visualizar.Name = "tab_visualizar";
@@ -667,16 +672,26 @@
             tab_visualizar.Text = "visualizar";
             tab_visualizar.UseVisualStyleBackColor = true;
             // 
+            // button_vis_actualizar_información
+            // 
+            button_vis_actualizar_información.Location = new Point(389, 6);
+            button_vis_actualizar_información.Name = "button_vis_actualizar_información";
+            button_vis_actualizar_información.Size = new Size(210, 29);
+            button_vis_actualizar_información.TabIndex = 8;
+            button_vis_actualizar_información.Text = "actualizar información";
+            button_vis_actualizar_información.UseVisualStyleBackColor = true;
+            button_vis_actualizar_información.Click += button_vis_actualizar_información_Click;
+            // 
             // tabControl_vis_ven
             // 
             tabControl_vis_ven.Controls.Add(tab_general);
             tabControl_vis_ven.Controls.Add(tabPage4);
             tabControl_vis_ven.Controls.Add(tabPage5);
             tabControl_vis_ven.Controls.Add(tabPage6);
-            tabControl_vis_ven.Location = new Point(6, 9);
+            tabControl_vis_ven.Location = new Point(6, 37);
             tabControl_vis_ven.Name = "tabControl_vis_ven";
             tabControl_vis_ven.SelectedIndex = 0;
-            tabControl_vis_ven.Size = new Size(974, 679);
+            tabControl_vis_ven.Size = new Size(974, 651);
             tabControl_vis_ven.TabIndex = 1;
             // 
             // tab_general
@@ -690,7 +705,7 @@
             tab_general.Controls.Add(dataGridView_general);
             tab_general.Location = new Point(4, 29);
             tab_general.Name = "tab_general";
-            tab_general.Size = new Size(966, 646);
+            tab_general.Size = new Size(966, 618);
             tab_general.TabIndex = 3;
             tab_general.Text = "general";
             tab_general.UseVisualStyleBackColor = true;
@@ -753,7 +768,7 @@
             tabPage4.Location = new Point(4, 29);
             tabPage4.Name = "tabPage4";
             tabPage4.Padding = new Padding(3);
-            tabPage4.Size = new Size(966, 646);
+            tabPage4.Size = new Size(966, 618);
             tabPage4.TabIndex = 0;
             tabPage4.Text = "movimient";
             tabPage4.UseVisualStyleBackColor = true;
@@ -820,7 +835,7 @@
             tabPage5.Location = new Point(4, 29);
             tabPage5.Name = "tabPage5";
             tabPage5.Padding = new Padding(3);
-            tabPage5.Size = new Size(966, 646);
+            tabPage5.Size = new Size(966, 618);
             tabPage5.TabIndex = 1;
             tabPage5.Text = "compra";
             tabPage5.UseVisualStyleBackColor = true;
@@ -850,7 +865,7 @@
             tabPage6.Controls.Add(label45);
             tabPage6.Location = new Point(4, 29);
             tabPage6.Name = "tabPage6";
-            tabPage6.Size = new Size(966, 646);
+            tabPage6.Size = new Size(966, 618);
             tabPage6.TabIndex = 2;
             tabPage6.Text = "venta";
             tabPage6.UseVisualStyleBackColor = true;
@@ -897,15 +912,17 @@
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(labbel_act_mov_chapeta);
+            tabPage1.Controls.Add(button_act_mov_eliminar);
             tabPage1.Controls.Add(textBox_act_mov_id_movimiento);
-            tabPage1.Controls.Add(button_act_mov_id_movimiento);
+            tabPage1.Controls.Add(button_act_mov_ingresar);
             tabPage1.Controls.Add(label4);
             tabPage1.Controls.Add(comboBox_act_mov_concepto);
             tabPage1.Controls.Add(comboBox_act_mov_finca_destino);
             tabPage1.Controls.Add(comboBox_act_mov_finca_origen);
             tabPage1.Controls.Add(label6);
             tabPage1.Controls.Add(textBox_act_mov_peso_destino);
-            tabPage1.Controls.Add(button2);
+            tabPage1.Controls.Add(button_act_mov_actualizar);
             tabPage1.Controls.Add(textBox_act_mov_peso_origen);
             tabPage1.Controls.Add(label7);
             tabPage1.Controls.Add(label8);
@@ -913,7 +930,6 @@
             tabPage1.Controls.Add(label9);
             tabPage1.Controls.Add(label10);
             tabPage1.Controls.Add(label11);
-            tabPage1.Controls.Add(textBox_act_mov_chapeta);
             tabPage1.Controls.Add(label12);
             tabPage1.Controls.Add(label13);
             tabPage1.Location = new Point(4, 29);
@@ -924,6 +940,27 @@
             tabPage1.Text = "movimient";
             tabPage1.UseVisualStyleBackColor = true;
             // 
+            // labbel_act_mov_chapeta
+            // 
+            labbel_act_mov_chapeta.AutoSize = true;
+            labbel_act_mov_chapeta.Location = new Point(463, 86);
+            labbel_act_mov_chapeta.Name = "labbel_act_mov_chapeta";
+            labbel_act_mov_chapeta.Size = new Size(135, 20);
+            labbel_act_mov_chapeta.TabIndex = 42;
+            labbel_act_mov_chapeta.Text = "XXXXXXXXXXXXXX";
+            // 
+            // button_act_mov_eliminar
+            // 
+            button_act_mov_eliminar.BackColor = Color.MistyRose;
+            button_act_mov_eliminar.ForeColor = SystemColors.ActiveCaptionText;
+            button_act_mov_eliminar.Location = new Point(553, 484);
+            button_act_mov_eliminar.Name = "button_act_mov_eliminar";
+            button_act_mov_eliminar.Size = new Size(94, 29);
+            button_act_mov_eliminar.TabIndex = 41;
+            button_act_mov_eliminar.Text = "eliminar";
+            button_act_mov_eliminar.UseVisualStyleBackColor = false;
+            button_act_mov_eliminar.Click += button_act_mov_eliminar_Click;
+            // 
             // textBox_act_mov_id_movimiento
             // 
             textBox_act_mov_id_movimiento.Location = new Point(54, 215);
@@ -931,15 +968,15 @@
             textBox_act_mov_id_movimiento.Size = new Size(164, 27);
             textBox_act_mov_id_movimiento.TabIndex = 40;
             // 
-            // button_act_mov_id_movimiento
+            // button_act_mov_ingresar
             // 
-            button_act_mov_id_movimiento.Location = new Point(84, 257);
-            button_act_mov_id_movimiento.Name = "button_act_mov_id_movimiento";
-            button_act_mov_id_movimiento.Size = new Size(94, 29);
-            button_act_mov_id_movimiento.TabIndex = 39;
-            button_act_mov_id_movimiento.Text = "ingresar";
-            button_act_mov_id_movimiento.UseVisualStyleBackColor = true;
-            button_act_mov_id_movimiento.Click += button_act_mov_id_movimiento_Click;
+            button_act_mov_ingresar.Location = new Point(84, 257);
+            button_act_mov_ingresar.Name = "button_act_mov_ingresar";
+            button_act_mov_ingresar.Size = new Size(94, 29);
+            button_act_mov_ingresar.TabIndex = 39;
+            button_act_mov_ingresar.Text = "ingresar";
+            button_act_mov_ingresar.UseVisualStyleBackColor = true;
+            button_act_mov_ingresar.Click += button_act_mov_id_movimiento_Click;
             // 
             // label4
             // 
@@ -993,14 +1030,15 @@
             textBox_act_mov_peso_destino.Size = new Size(262, 27);
             textBox_act_mov_peso_destino.TabIndex = 17;
             // 
-            // button2
+            // button_act_mov_actualizar
             // 
-            button2.Location = new Point(466, 484);
-            button2.Name = "button2";
-            button2.Size = new Size(94, 29);
-            button2.TabIndex = 15;
-            button2.Text = "actualizar";
-            button2.UseVisualStyleBackColor = true;
+            button_act_mov_actualizar.Location = new Point(414, 484);
+            button_act_mov_actualizar.Name = "button_act_mov_actualizar";
+            button_act_mov_actualizar.Size = new Size(94, 29);
+            button_act_mov_actualizar.TabIndex = 15;
+            button_act_mov_actualizar.Text = "actualizar";
+            button_act_mov_actualizar.UseVisualStyleBackColor = true;
+            button_act_mov_actualizar.Click += button_act_mov_actualizar_Click;
             // 
             // textBox_act_mov_peso_origen
             // 
@@ -1061,13 +1099,6 @@
             label11.TabIndex = 11;
             label11.Text = "fecha";
             // 
-            // textBox_act_mov_chapeta
-            // 
-            textBox_act_mov_chapeta.Location = new Point(414, 77);
-            textBox_act_mov_chapeta.Name = "textBox_act_mov_chapeta";
-            textBox_act_mov_chapeta.Size = new Size(262, 27);
-            textBox_act_mov_chapeta.TabIndex = 1;
-            // 
             // label12
             // 
             label12.AutoSize = true;
@@ -1088,15 +1119,16 @@
             // 
             // tabPage2
             // 
+            tabPage2.Controls.Add(button_act_com_eliminar);
             tabPage2.Controls.Add(textBox_act_com_id_compra);
-            tabPage2.Controls.Add(button_act_com_id_compra);
+            tabPage2.Controls.Add(button_act_com_ingresar);
             tabPage2.Controls.Add(label5);
             tabPage2.Controls.Add(textBox_act_com_factura);
             tabPage2.Controls.Add(dateTimePicker_act_com_fecha);
             tabPage2.Controls.Add(textBox_act_com_peso_despacho);
             tabPage2.Controls.Add(comboBox_act_com_finca);
             tabPage2.Controls.Add(comboBox_act_com_proveedor);
-            tabPage2.Controls.Add(button3);
+            tabPage2.Controls.Add(button_act_com_actualizar);
             tabPage2.Controls.Add(label14);
             tabPage2.Controls.Add(label15);
             tabPage2.Controls.Add(label16);
@@ -1111,6 +1143,18 @@
             tabPage2.Text = "compra";
             tabPage2.UseVisualStyleBackColor = true;
             // 
+            // button_act_com_eliminar
+            // 
+            button_act_com_eliminar.BackColor = Color.MistyRose;
+            button_act_com_eliminar.ForeColor = SystemColors.ActiveCaptionText;
+            button_act_com_eliminar.Location = new Point(570, 403);
+            button_act_com_eliminar.Name = "button_act_com_eliminar";
+            button_act_com_eliminar.Size = new Size(94, 29);
+            button_act_com_eliminar.TabIndex = 50;
+            button_act_com_eliminar.Text = "eliminar";
+            button_act_com_eliminar.UseVisualStyleBackColor = false;
+            button_act_com_eliminar.Click += button_act_com_eliminar_Click;
+            // 
             // textBox_act_com_id_compra
             // 
             textBox_act_com_id_compra.Location = new Point(65, 230);
@@ -1118,15 +1162,15 @@
             textBox_act_com_id_compra.Size = new Size(125, 27);
             textBox_act_com_id_compra.TabIndex = 49;
             // 
-            // button_act_com_id_compra
+            // button_act_com_ingresar
             // 
-            button_act_com_id_compra.Location = new Point(78, 278);
-            button_act_com_id_compra.Name = "button_act_com_id_compra";
-            button_act_com_id_compra.Size = new Size(94, 29);
-            button_act_com_id_compra.TabIndex = 48;
-            button_act_com_id_compra.Text = "ingresar";
-            button_act_com_id_compra.UseVisualStyleBackColor = true;
-            button_act_com_id_compra.Click += button_act_com_id_compra_Click;
+            button_act_com_ingresar.Location = new Point(78, 278);
+            button_act_com_ingresar.Name = "button_act_com_ingresar";
+            button_act_com_ingresar.Size = new Size(94, 29);
+            button_act_com_ingresar.TabIndex = 48;
+            button_act_com_ingresar.Text = "ingresar";
+            button_act_com_ingresar.UseVisualStyleBackColor = true;
+            button_act_com_ingresar.Click += button_act_com_id_compra_Click;
             // 
             // label5
             // 
@@ -1176,14 +1220,15 @@
             comboBox_act_com_proveedor.Size = new Size(262, 28);
             comboBox_act_com_proveedor.TabIndex = 33;
             // 
-            // button3
+            // button_act_com_actualizar
             // 
-            button3.Location = new Point(450, 401);
-            button3.Name = "button3";
-            button3.Size = new Size(94, 29);
-            button3.TabIndex = 32;
-            button3.Text = "actualizar";
-            button3.UseVisualStyleBackColor = true;
+            button_act_com_actualizar.Location = new Point(441, 403);
+            button_act_com_actualizar.Name = "button_act_com_actualizar";
+            button_act_com_actualizar.Size = new Size(94, 29);
+            button_act_com_actualizar.TabIndex = 32;
+            button_act_com_actualizar.Text = "actualizar";
+            button_act_com_actualizar.UseVisualStyleBackColor = true;
+            button_act_com_actualizar.Click += button_act_com_actualizar_Click;
             // 
             // label14
             // 
@@ -1241,8 +1286,9 @@
             // 
             // tabPage3
             // 
-            tabPage3.Controls.Add(textBox1);
-            tabPage3.Controls.Add(button_act_com_id_venta);
+            tabPage3.Controls.Add(button_act_ven_eliminar);
+            tabPage3.Controls.Add(textBox_act_ven_id_venta);
+            tabPage3.Controls.Add(button_act_ven_ingresar);
             tabPage3.Controls.Add(label35);
             tabPage3.Controls.Add(comboBox_act_ven_finca);
             tabPage3.Controls.Add(comboBox_act_ven_cliente);
@@ -1254,7 +1300,7 @@
             tabPage3.Controls.Add(textBox_act_ven_peso_despacho);
             tabPage3.Controls.Add(label31);
             tabPage3.Controls.Add(label32);
-            tabPage3.Controls.Add(button4);
+            tabPage3.Controls.Add(button_act_ven_actualizar);
             tabPage3.Controls.Add(label33);
             tabPage3.Location = new Point(4, 29);
             tabPage3.Name = "tabPage3";
@@ -1263,22 +1309,34 @@
             tabPage3.Text = "venta";
             tabPage3.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // button_act_ven_eliminar
             // 
-            textBox1.Location = new Point(65, 229);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 48;
+            button_act_ven_eliminar.BackColor = Color.MistyRose;
+            button_act_ven_eliminar.ForeColor = SystemColors.ActiveCaptionText;
+            button_act_ven_eliminar.Location = new Point(569, 382);
+            button_act_ven_eliminar.Name = "button_act_ven_eliminar";
+            button_act_ven_eliminar.Size = new Size(94, 29);
+            button_act_ven_eliminar.TabIndex = 49;
+            button_act_ven_eliminar.Text = "eliminar";
+            button_act_ven_eliminar.UseVisualStyleBackColor = false;
+            button_act_ven_eliminar.Click += button_act_ven_eliminar_Click;
             // 
-            // button_act_com_id_venta
+            // textBox_act_ven_id_venta
             // 
-            button_act_com_id_venta.Location = new Point(77, 277);
-            button_act_com_id_venta.Name = "button_act_com_id_venta";
-            button_act_com_id_venta.Size = new Size(94, 29);
-            button_act_com_id_venta.TabIndex = 47;
-            button_act_com_id_venta.Text = "ingresar";
-            button_act_com_id_venta.UseVisualStyleBackColor = true;
-            button_act_com_id_venta.Click += button_act_com_id_venta_Click;
+            textBox_act_ven_id_venta.Location = new Point(65, 229);
+            textBox_act_ven_id_venta.Name = "textBox_act_ven_id_venta";
+            textBox_act_ven_id_venta.Size = new Size(125, 27);
+            textBox_act_ven_id_venta.TabIndex = 48;
+            // 
+            // button_act_ven_ingresar
+            // 
+            button_act_ven_ingresar.Location = new Point(77, 277);
+            button_act_ven_ingresar.Name = "button_act_ven_ingresar";
+            button_act_ven_ingresar.Size = new Size(94, 29);
+            button_act_ven_ingresar.TabIndex = 47;
+            button_act_ven_ingresar.Text = "ingresar";
+            button_act_ven_ingresar.UseVisualStyleBackColor = true;
+            button_act_ven_ingresar.Click += button_act_com_id_venta_Click;
             // 
             // label35
             // 
@@ -1373,14 +1431,15 @@
             label32.TabIndex = 40;
             label32.Text = "peso despacho";
             // 
-            // button4
+            // button_act_ven_actualizar
             // 
-            button4.Location = new Point(452, 382);
-            button4.Name = "button4";
-            button4.Size = new Size(94, 29);
-            button4.TabIndex = 32;
-            button4.Text = "actualizar";
-            button4.UseVisualStyleBackColor = true;
+            button_act_ven_actualizar.Location = new Point(438, 382);
+            button_act_ven_actualizar.Name = "button_act_ven_actualizar";
+            button_act_ven_actualizar.Size = new Size(94, 29);
+            button_act_ven_actualizar.TabIndex = 32;
+            button_act_ven_actualizar.Text = "actualizar";
+            button_act_ven_actualizar.UseVisualStyleBackColor = true;
+            button_act_ven_actualizar.Click += button_act_ven_actualizar_Click;
             // 
             // label33
             // 
@@ -1569,7 +1628,7 @@
         private ComboBox comboBox_act_mov_finca_origen;
         private Label label6;
         private TextBox textBox_act_mov_peso_destino;
-        private Button button2;
+        private Button button_act_mov_actualizar;
         private TextBox textBox_act_mov_peso_origen;
         private Label label7;
         private Label label8;
@@ -1577,7 +1636,6 @@
         private Label label9;
         private Label label10;
         private Label label11;
-        private TextBox textBox_act_mov_chapeta;
         private Label label12;
         private Label label13;
         private TabPage tabPage2;
@@ -1587,7 +1645,7 @@
         private TextBox textBox_act_com_peso_despacho;
         private ComboBox comboBox_act_com_finca;
         private ComboBox comboBox_act_com_proveedor;
-        private Button button3;
+        private Button button_act_com_actualizar;
         private Label label14;
         private Label label15;
         private Label label16;
@@ -1606,15 +1664,20 @@
         private TextBox textBox_act_ven_peso_despacho;
         private Label label31;
         private Label label32;
-        private Button button4;
+        private Button button_act_ven_actualizar;
         private Label label33;
-        private Button button_act_mov_id_movimiento;
-        private Button button_act_com_id_compra;
-        private Button button_act_com_id_venta;
+        private Button button_act_mov_ingresar;
+        private Button button_act_com_ingresar;
+        private Button button_act_ven_ingresar;
         private ComboBox comboBox1;
         private ComboBox comboBox5;
         private TextBox textBox_act_mov_id_movimiento;
         private TextBox textBox_act_com_id_compra;
-        private TextBox textBox1;
+        private TextBox textBox_act_ven_id_venta;
+        private Button button_vis_actualizar_información;
+        private Button button_act_mov_eliminar;
+        private Button button_act_com_eliminar;
+        private Button button_act_ven_eliminar;
+        private Label labbel_act_mov_chapeta;
     }
 }

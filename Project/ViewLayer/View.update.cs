@@ -70,6 +70,15 @@ namespace View
             dataGridView_vis_com.DataSource = tables[5];
             dataGridView_vis_ven.DataSource = tables[6];
         }
+
+        public void button_vis_actualizar_información_Response(List<DataTable> tables)
+        {
+            //1 general, 2 compra, 3 venta
+            dataGridView_general.DataSource = tables[0];
+            dataGridView_vis_com.DataSource = tables[1];
+            dataGridView_vis_ven.DataSource = tables[2];
+
+        }
         public void ShowAnimalPorFincaView(DataTable table)
         {
             dataGridView_por_finca.DataSource = table;
@@ -77,7 +86,7 @@ namespace View
 
         public void button_act_mov_id_movimiento_Response(Movimiento myMovimiento)
         {
-            textBox_act_mov_chapeta.Text = myMovimiento.Chapeta;
+            labbel_act_mov_chapeta.Text = myMovimiento.Chapeta;
             comboBox_act_mov_concepto.SelectedValue = myMovimiento.Concepto;
             dateTimePicker_act_mov_fecha.Value = myMovimiento.Fecha;
             comboBox_act_mov_finca_origen.SelectedValue = myMovimiento.FincaOrigen;

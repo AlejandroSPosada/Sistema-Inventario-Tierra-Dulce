@@ -9,5 +9,7 @@ namespace Project.ModelLayer.Repository
     public interface ICompraRepository
     {
         public Compra SearchByID(string id);
+        public void DeleteByID(string id);
+        public void UpdateByID(Compra compra, string id);
     }
 }

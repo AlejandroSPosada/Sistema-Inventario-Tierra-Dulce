@@ -31,13 +31,18 @@ namespace Project.PresenterLayer
             model = new Model();
             _repository = repository;
         }
+        public void InitializeInventoryPresenter()
+        {
+            List<DataTable> myList = model.InitializeInventoryModel();
+            view.InitializeInventoryView(myList);
+        }
 
         public void GetMovimientoById(string id)
         {
             Movimiento myMovimiento = _repository.MovimientoRepository.SearchByID(id);
             if (myMovimiento == null)
             {
-                ShowMessages.ShowMessage("el ID no existe");
+                ShowMessages.ShowMessage("el ID no existe o no es válido.");
                 return;
             }
             view.button_act_mov_id_movimiento_Response(myMovimiento);
@@ -65,12 +70,11 @@ namespace Project.PresenterLayer
             view.button_act_com_id_venta_Response(myVenta);
         }
 
-        public void InitializeInventoryPresenter()
+        public void ActualiarInformacionPresenter()
         {
-            List<DataTable> myList = model.InitializeInventoryModel();
-            view.InitializeInventoryView(myList);
+            List<DataTable> curr = model.ActualizarInformacionModel();
+            view.button_vis_actualizar_información_Response(curr);
         }
-
         public void ShowAnimalesFincaPresenter(int input)
         {
             view.ShowAnimalPorFincaView(model.Show_Animals_In_Finca_Order_Model(input));
@@ -183,6 +187,85 @@ namespace Project.PresenterLayer
             bool success = model.InsertVenta(venta);
         }
 
-        
+        public void EliminarMovimientoPresenter(string input)
+        {
+            _repository.MovimientoRepository.DeleteByID(input);
+        }
+
+        public void EliminarCompraPresenter(string input)
+        {
+            _repository.CompraRepository.DeleteByID(input);
+        }
+
+        public void EliminarVentaPresenter(string input)
+        {
+            _repository.VentaRepository.DeleteByID(input);
+        }
+
+        public void ActualizarMovimientoPresenter(
+            string chapeta,
+            int concepto,
+            DateTime fecha,
+            int fincaOrigen,
+            int fincaDestino,
+            int pesoOrigen,
+            int pesoDestino,
+            string id
+            )
+        {
+            Movimiento movimiento = new Movimiento
+            {
+                Chapeta = chapeta,
+                Concepto = concepto,
+                Fecha = fecha,
+                FincaOrigen = fincaOrigen,
+                FincaDestino = fincaDestino,
+                PesoOrigen = pesoOrigen,
+                PesoDestino = pesoDestino
+            };
+
+            _repository.MovimientoRepository.UpdateByID(movimiento, id);
+        }
+
+        public void ActualizarCompraPresenter(
+            int finca,
+            string idProveedor,
+            DateTime fecha,
+            int pesoDespacho,
+            string factura,
+            string id
+            )
+        {
+            Compra compra = new Compra
+            {
+                Finca = finca,
+                IdProveedor = idProveedor,
+                Fecha = fecha,
+                PesoDespacho = pesoDespacho,
+                Factura = factura
+            };
+            ShowMessages.ShowMessage(idProveedor);
+            _repository.CompraRepository.UpdateByID(compra, id);
+        }
+
+        public void ActualizarVentaPresenter(
+            int finca,
+            string idCliente,
+            DateTime fecha,
+            int pesoDespacho,
+            string factura,
+            string id
+            )
+        {
+            Venta venta = new Venta
+            {
+                Finca = finca,
+                IdCliente = idCliente,
+                Fecha = fecha,
+                PesoDespacho = pesoDespacho,
+                Factura = factura
+            };
+            _repository.VentaRepository.UpdateByID(venta, id);
+        }
     }
 }

@@ -7,7 +7,7 @@
     <Compile Update="ViewLayer\View.designer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ViewLayer\Update\View.update.cs">
+    <Compile Update="ViewLayer\View.update.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

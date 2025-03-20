@@ -10,5 +10,8 @@ namespace Project.ModelLayer.Repository
     public interface IMovimientoRepository
     {
        public Movimiento SearchByID(string id);
+       public void DeleteByID(string id);
+
+       public void UpdateByID(Movimiento movimiento, string id);
     }
 }

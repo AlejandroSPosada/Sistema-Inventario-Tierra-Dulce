@@ -39,6 +39,16 @@ namespace Project.ModelLayer
             };
         }
 
+        public List<DataTable> ActualizarInformacionModel()
+        {
+            return new List<DataTable>
+            {
+                SqlHelper.GetDataTable(SqlHelper.ProcedureGetDynamicAnimalReport),
+                SqlHelper.GetDataTable(SqlHelper.ProcedureSelectCompra),
+                SqlHelper.GetDataTable(SqlHelper.ProcedureSelectVenta)
+            };
+        }
+
         public DataTable Show_Animals_In_Finca_Order_Model(int id)
         {
             return SqlHelper.GetDataTable("EXEC show_animals_in_finca '" + id + "'");
